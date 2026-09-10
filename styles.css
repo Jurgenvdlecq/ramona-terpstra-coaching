@@ -140,9 +140,9 @@ nav a:hover {
 
 .eyebrow {
   color: var(--clay);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
   margin: 0 0 14px;
   text-transform: uppercase;
 }
@@ -248,6 +248,10 @@ p {
 .secondary {
   border: 1px solid var(--line);
   color: var(--sage-dark);
+}
+
+.mobile-cta {
+  display: none;
 }
 
 .hero-image,
@@ -726,6 +730,29 @@ footer a {
 }
 
 @media (max-width: 900px) {
+  body {
+    padding-bottom: 78px;
+  }
+
+  .mobile-cta {
+    background: rgba(255, 253, 250, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--line);
+    bottom: 0;
+    box-shadow: 0 -12px 30px rgba(72, 63, 50, 0.14);
+    display: block;
+    left: 0;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    position: fixed;
+    right: 0;
+    z-index: 15;
+  }
+
+  .mobile-cta .button {
+    display: flex;
+    width: 100%;
+  }
+
   .site-header {
     align-items: center;
     background: rgba(255, 253, 250, 0.84);
@@ -846,7 +873,7 @@ footer a {
   }
 
   .eyebrow {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 1.35;
   }
 
