@@ -215,7 +215,47 @@
             <span>Contact via formulier, mail of telefoon</span>
           </div>
         </div>
-        <a class="button primary" href="https://www.ramonaterpstra.nl/contact/">Plan een vrijblijvende kennismaking</a>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div>
+              <label for="voornaam">Voornaam</label>
+              <input type="text" id="voornaam" name="voornaam" autocomplete="given-name" required />
+            </div>
+            <div>
+              <label for="achternaam">Achternaam</label>
+              <input type="text" id="achternaam" name="achternaam" autocomplete="family-name" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="email">E-mailadres</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+            </div>
+            <div>
+              <label for="telefoon">Telefoonnummer (optioneel)</label>
+              <input type="tel" id="telefoon" name="telefoon" autocomplete="tel" />
+            </div>
+          </div>
+          <div>
+            <label for="bericht">Je bericht</label>
+            <textarea id="bericht" name="bericht" rows="5" required></textarea>
+          </div>
+          <label class="form-checkbox">
+            <input type="checkbox" id="akkoord" name="akkoord" required />
+            <span>
+              Ik ga akkoord met de
+              <a href="https://www.ramonaterpstra.nl/algemene-voorwaarden/" target="_blank" rel="noreferrer">algemene voorwaarden</a>
+              en de
+              <a href="https://www.ramonaterpstra.nl/privacy-verklaring/" target="_blank" rel="noreferrer">privacyverklaring</a>.
+            </span>
+          </label>
+          <p class="form-status" id="form-status" role="alert" hidden></p>
+          <button class="button primary" type="submit">Verstuur je bericht</button>
+          <p class="form-note">
+            Je bericht wordt geopend in je eigen e-mailprogramma, geadresseerd
+            aan Ramona. Je hoeft daar alleen nog op verzenden te klikken.
+          </p>
+        </form>
       </section>
     </main>
 
@@ -259,6 +299,52 @@
 
         document.addEventListener("keydown", function (event) {
           if (event.key === "Escape") closeNav();
+        });
+      })();
+
+      (function () {
+        var form = document.getElementById("contact-form");
+        var status = document.getElementById("form-status");
+        if (!form || !status) return;
+
+        var RECIPIENT = ["ramonaterpstra", "gmail.com"].join("@");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+
+          var voornaam = form.voornaam.value.trim();
+          var achternaam = form.achternaam.value.trim();
+          var email = form.email.value.trim();
+          var telefoon = form.telefoon.value.trim();
+          var bericht = form.bericht.value.trim();
+
+          var subject = "Contactformulier website – " + voornaam + " " + achternaam;
+          var bodyLines = [
+            "Naam: " + voornaam + " " + achternaam,
+            "E-mailadres: " + email,
+            "Telefoonnummer: " + (telefoon || "-"),
+            "",
+            "Bericht:",
+            bericht,
+          ];
+
+          var mailtoUrl =
+            "mailto:" +
+            RECIPIENT +
+            "?subject=" +
+            encodeURIComponent(subject) +
+            "&body=" +
+            encodeURIComponent(bodyLines.join("\n"));
+
+          status.textContent = "Je e-mailprogramma wordt geopend met je bericht al ingevuld.";
+          status.dataset.state = "info";
+          status.hidden = false;
+          window.location.href = mailtoUrl;
         });
       })();
     </script>

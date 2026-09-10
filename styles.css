@@ -688,6 +688,108 @@ details p {
   padding: 9px 13px;
 }
 
+.contact-form {
+  background: var(--paper);
+  border-radius: 12px;
+  box-shadow: 0 28px 70px rgba(20, 24, 18, 0.22);
+  color: var(--foreground);
+  display: grid;
+  flex: 0 1 480px;
+  gap: 18px;
+  max-width: 480px;
+  padding: 30px;
+}
+
+.contact-form .form-row {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: var(--background);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--foreground);
+  font: inherit;
+  padding: 12px 14px;
+  width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--sage-dark);
+  outline: 2px solid var(--moss);
+  outline-offset: 1px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.form-checkbox {
+  align-items: flex-start;
+  display: flex;
+  font-size: 0.86rem;
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.form-checkbox input {
+  margin-top: 3px;
+  width: auto;
+}
+
+.form-checkbox a {
+  text-decoration: underline;
+}
+
+.contact-form .button {
+  justify-self: start;
+}
+
+.contact-form button.button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.contact-form .button.primary {
+  background: var(--sage-dark);
+  color: #fffdfa;
+}
+
+.form-note {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+.form-status {
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 12px 14px;
+}
+
+.form-status[data-state="error"] {
+  background: #f6e3df;
+  color: #8a3b28;
+}
+
+.form-status[data-state="info"] {
+  background: var(--moss);
+  color: var(--sage-dark);
+}
+
 footer {
   align-items: center;
   background: #25231f;
@@ -831,6 +933,15 @@ footer a {
 
   .contact .button {
     width: 100%;
+  }
+
+  .contact-form {
+    max-width: none;
+    width: 100%;
+  }
+
+  .contact-form .form-row {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1013,6 +1124,10 @@ footer a {
   .contact {
     padding-bottom: 42px;
     padding-top: 42px;
+  }
+
+  .contact-form {
+    padding: 22px;
   }
 
   .contact-details {
