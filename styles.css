@@ -87,6 +87,42 @@ nav a:hover {
   color: var(--sage-dark);
 }
 
+.nav-toggle {
+  align-items: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  height: 40px;
+  justify-content: center;
+  padding: 0;
+  width: 40px;
+}
+
+.nav-toggle span {
+  background: var(--sage-dark);
+  border-radius: 2px;
+  display: block;
+  height: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  width: 18px;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 .hero {
   align-items: center;
   display: grid;
@@ -693,32 +729,46 @@ footer a {
   .site-header {
     align-items: center;
     background: rgba(255, 253, 250, 0.84);
-    flex-direction: column;
+    flex-direction: row;
     gap: 8px;
-    padding: 8px 16px 9px;
+    justify-content: space-between;
+    padding: 10px 16px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    flex-shrink: 0;
   }
 
   nav {
-    flex-wrap: nowrap;
-    gap: 14px;
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding: 0 0 2px;
-    scrollbar-width: none;
-    width: 100%;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(72, 63, 50, 0.16);
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    left: 16px;
+    padding: 10px;
+    position: absolute;
+    right: 16px;
+    top: calc(100% + 8px);
+    width: auto;
   }
 
-  nav::-webkit-scrollbar {
-    display: none;
+  nav.is-open {
+    display: flex;
   }
 
   nav a {
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    flex: 0 0 auto;
-    font-size: 0.82rem;
-    padding: 2px 0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    padding: 12px 14px;
+  }
+
+  nav a:hover {
+    background: var(--moss);
   }
 
   .hero,
@@ -736,7 +786,6 @@ footer a {
 
   .hero-image {
     min-height: 340px;
-    order: -1;
   }
 
   .trust-list {
@@ -764,9 +813,7 @@ footer a {
   }
 
   .brand {
-    justify-content: center;
     min-width: 0;
-    width: 100%;
   }
 
   .brand img {
@@ -775,14 +822,6 @@ footer a {
 
   .brand span {
     font-size: 0.92rem;
-  }
-
-  nav {
-    mask-image: linear-gradient(90deg, #000 88%, transparent);
-  }
-
-  nav a {
-    font-size: 0.78rem;
   }
 
   h1 {

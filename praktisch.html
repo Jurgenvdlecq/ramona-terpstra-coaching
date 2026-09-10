@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Praktische informatie &amp; veelgestelde vragen | Ramona Terpstra Coaching</title>
+    <meta
+      name="description"
+      content="Locatie, kleding, veiligheid en tarieven, plus antwoorden op veelgestelde vragen over paardencoaching bij rouw en verlies."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Hoofdnavigatie">
+      <a class="brand" href="index.html" aria-label="Ramona Terpstra Coaching">
+        <img src="images/logo.png" alt="" width="58" height="48" />
+        <span>Ramona Terpstra Coaching</span>
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Menu openen"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav">
+        <a href="index.html#paardencoaching">Paardencoaching</a>
+        <a href="index.html#werkwijze">Werkwijze</a>
+        <a href="aanbod.html">Aanbod</a>
+        <a href="over-ramona.html">Over Ramona</a>
+        <a href="praktisch.html">Praktisch &amp; FAQ</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section-band practical">
+        <div class="section-intro">
+          <p class="eyebrow">Praktisch</p>
+          <h2>Wat handig is om vooraf te weten.</h2>
+        </div>
+        <div class="practical-grid">
+          <article><h3>Locatie</h3><p>Begeleiding in de regio Alkmaar en Bergen, in een rustige setting met de paarden.</p></article>
+          <article><h3>Kleding</h3><p>Draag kleding waarin je makkelijk beweegt en schoenen die vies mogen worden.</p></article>
+          <article><h3>Veiligheid</h3><p>Je werkt altijd onder begeleiding. Afstand, rust en respect voor mens en dier zijn leidend.</p></article>
+          <article><h3>Tarieven</h3><p>Tarieven en maatwerk kunnen op aanvraag of tijdens de kennismaking worden besproken.</p></article>
+        </div>
+      </section>
+
+      <section class="faq" id="faq">
+        <div class="section-intro">
+          <p class="eyebrow">Veelgestelde vragen</p>
+          <h2>Twijfels mogen er ook zijn.</h2>
+        </div>
+        <div class="faq-list">
+          <details><summary>Moet ik ervaring hebben met paarden?</summary><p>Nee. Je hoeft niets met paarden te kunnen en je hoeft ook niet te rijden. De sessies vinden naast het paard plaats.</p></details>
+          <details><summary>Is paardencoaching hetzelfde als paardrijles?</summary><p>Nee. Paardencoaching gaat niet over rijden of techniek, maar over wat er zichtbaar wordt in contact met het paard.</p></details>
+          <details><summary>Moet ik tijdens iedere sessie met een paard werken?</summary><p>Nee. De paarden zijn onderdeel van mijn manier van werken, maar niet iedere sessie hoeft hetzelfde te verlopen. We kijken naar wat bij jou en bij dat moment past.</p></details>
+          <details><summary>Wat als ik paarden spannend vind?</summary><p>Dat mag. Je hoeft niet direct dichtbij een paard te staan of contact te maken. Ook afstand houden, kijken en opmerken wat er bij jou gebeurt kan onderdeel zijn van de sessie.</p></details>
+          <details><summary>Ik weet niet goed wat mijn hulpvraag is. Kan ik dan toch contact opnemen?</summary><p>Ja. Misschien weet je alleen dat je sinds het overlijden anders reageert dan je van jezelf gewend bent en dat je hier niet alleen in verder wilt. Dat is genoeg om mee te beginnen.</p></details>
+          <details><summary>Voor wie is dit minder geschikt?</summary><p>Bij ernstige psychische klachten, crisis of acute onveiligheid is aanvullende professionele zorg belangrijk. Als mijn begeleiding niet voldoende of passend is, zal ik daar eerlijk over zijn.</p></details>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div>
+          <p class="eyebrow">Eerste stap</p>
+          <h2>Je hoeft je verhaal nog niet compleet te hebben.</h2>
+          <p>
+            Een paar zinnen over waar je nu tegenaan loopt zijn genoeg. Daarna
+            kijken we samen rustig of een kennismaking of traject passend is.
+          </p>
+        </div>
+        <a class="button primary" href="https://www.ramonaterpstra.nl/contact/">Plan een vrijblijvende kennismaking</a>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <strong>Ramona Terpstra Coaching</strong>
+        <p>Rouwbegeleiding, paardencoaching en teambegeleiding bij verlies.</p>
+      </div>
+      <div class="footer-links">
+        <a href="aanbod.html">Aanbod</a>
+        <a href="over-ramona.html">Over Ramona</a>
+        <a href="praktisch.html">Praktisch &amp; FAQ</a>
+        <a href="https://www.ramonaterpstra.nl/algemene-voorwaarden/">Algemene voorwaarden</a>
+        <a href="https://www.ramonaterpstra.nl/privacy-verklaring/">Privacy verklaring</a>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var toggle = document.querySelector(".nav-toggle");
+        var nav = document.getElementById("site-nav");
+        if (!toggle || !nav) return;
+
+        function closeNav() {
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+        }
+
+        toggle.addEventListener("click", function () {
+          var isOpen = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        nav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", closeNav);
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") closeNav();
+        });
+      })();
+    </script>
+  </body>
+</html>

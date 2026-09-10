@@ -6,7 +6,7 @@
     <title>Ramona Terpstra Coaching | Rouwbegeleiding met paarden</title>
     <meta
       name="description"
-      content="Rouwbegeleiding, paardencoaching en teambegeleiding bij verlies in Alkmaar en Bergen."
+      content="Rouwbegeleiding en paardencoaching in Alkmaar en Bergen: waar je tegenaan loopt, hoe Ramona je helpt en hoe een sessie werkt."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -16,12 +16,22 @@
         <img src="images/logo.png" alt="" width="58" height="48" />
         <span>Ramona Terpstra Coaching</span>
       </a>
-      <nav>
-        <a href="#paardencoaching">Paardencoaching</a>
-        <a href="#werkwijze">Werkwijze</a>
-        <a href="#aanbod">Aanbod</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Menu openen"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav">
+        <a href="index.html#paardencoaching">Paardencoaching</a>
+        <a href="index.html#werkwijze">Werkwijze</a>
+        <a href="aanbod.html">Aanbod</a>
+        <a href="over-ramona.html">Over Ramona</a>
+        <a href="praktisch.html">Praktisch &amp; FAQ</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
     </header>
 
@@ -43,7 +53,7 @@
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#contact">Plan een vrijblijvende kennismaking</a>
-            <a class="button secondary" href="#paardencoaching">Wat is paardencoaching?</a>
+            <a class="button secondary" href="#paardencoaching">Wat doet Ramona en hoe?</a>
           </div>
           <ul class="trust-list" aria-label="Kernpunten">
             <li>Geen paardrijles</li>
@@ -57,22 +67,9 @@
         </div>
       </section>
 
-      <section class="intro-card" aria-label="Introductie Ramona">
-        <div>
-          <p class="eyebrow">Ik ben Ramona</p>
-          <h2>Ik begeleid je rustig, ervaringsgericht en zonder dat je iets hoeft te forceren.</h2>
-        </div>
-        <p>
-          In mijn begeleiding is er plek voor wat vaak moeilijk in woorden te
-          vangen is: spanning, gemis, schuldgevoel, boosheid, leegte of het
-          verlangen om weer steviger te staan. De paarden reageren eerlijk en
-          zonder oordeel. Dat maakt zichtbaar wat er in jou gebeurt.
-        </p>
-      </section>
-
       <section class="recognition section-band">
         <div class="section-intro">
-          <p class="eyebrow">Herkenning</p>
+          <p class="eyebrow">Waar loop je tegenaan?</p>
           <h2>Je gaat door. Je werkt. Je zorgt. Je doet wat er nodig is.</h2>
           <p>
             Natuurlijk mis je degene die er niet meer is. Maar misschien merk
@@ -96,6 +93,20 @@
           <div class="signal">Je lichaam voelt gespannen, leeg of uitgeput</div>
           <div class="signal">Je schaamt je soms voor wat je voelt</div>
         </div>
+      </section>
+
+      <section class="intro-card" aria-label="Wat doet Ramona">
+        <div>
+          <p class="eyebrow">Wat doet Ramona</p>
+          <h2>Ik begeleid je rustig, ervaringsgericht en zonder dat je iets hoeft te forceren.</h2>
+        </div>
+        <p>
+          In mijn begeleiding is er plek voor wat vaak moeilijk in woorden te
+          vangen is: spanning, gemis, schuldgevoel, boosheid, leegte of het
+          verlangen om weer steviger te staan. Mijn paarden Ollie en Bob
+          reageren eerlijk en zonder oordeel. Dat maakt zichtbaar wat er in
+          jou gebeurt.
+        </p>
       </section>
 
       <section class="split-section" id="paardencoaching">
@@ -138,30 +149,9 @@
         </div>
       </section>
 
-      <section class="section-band outcomes">
-        <div class="section-intro">
-          <p class="eyebrow">Wat het kan opleveren</p>
-          <h2>Meer voelen wat waar is, zodat je keuzes minder vanuit overleven maakt.</h2>
-          <p>
-            We zoeken niet naar hoe je zo snel mogelijk van je rouw afkomt.
-            We onderzoeken wat jij sinds het overlijden tegenkomt, hoe je
-            lichaam reageert en hoe je ruimte kunt maken voor je dierbare én
-            voor je eigen leven.
-          </p>
-        </div>
-        <div class="outcome-grid">
-          <div class="outcome">Meer rust in je hoofd en lijf</div>
-          <div class="outcome">Beter herkennen waar je grens ligt</div>
-          <div class="outcome">Meer vertrouwen in wat je voelt</div>
-          <div class="outcome">Inzicht in patronen die steeds terugkomen</div>
-          <div class="outcome">Ruimte voor rouw zonder jezelf kwijt te raken</div>
-          <div class="outcome">Meer taal voor wat er op het werk of thuis speelt</div>
-        </div>
-      </section>
-
       <section class="split-section" id="werkwijze">
         <div class="split-copy">
-          <p class="eyebrow">Werkwijze</p>
+          <p class="eyebrow">Hoe werkt een sessie</p>
           <h2>Zo verloopt een sessie.</h2>
           <p>
             De begeleiding is praktisch, lichaamsgericht en afgestemd op wat er
@@ -194,166 +184,16 @@
         </div>
       </section>
 
-      <section class="offers" id="aanbod">
+      <section class="section-band outcomes">
         <div class="section-intro">
           <p class="eyebrow">Mijn aanbod</p>
-          <h2>Kies de vorm die past bij waar je nu staat.</h2>
+          <h2>Van een vrijblijvende kennismaking tot een volledig traject.</h2>
           <p>
-            Je hoeft nog niet precies te weten wat je vraag is. We nemen rustig
-            de tijd om te voelen of deze manier van werken en mijn begeleiding
-            passend zijn.
+            Een kennismakingsgesprek, een 1:1 traject, een kleine groep of
+            begeleiding voor een team — je hoeft nog niet te weten wat bij je
+            past.
           </p>
-        </div>
-        <div class="offer-grid">
-          <article class="offer">
-            <h3>Kennismakingsgesprek</h3>
-            <p class="offer-intro">Voor als je eerst rustig wilt voelen of dit past.</p>
-            <dl>
-              <div><dt>Voor wie</dt><dd>Als je merkt dat je iets nodig hebt na verlies, verandering of vastlopen, maar nog niet weet of mijn manier van werken bij je past.</dd></div>
-              <div><dt>Wat het brengt</dt><dd>Je hoeft je hele verhaal nog niet op een rij te hebben — een paar zinnen over waar je tegenaan loopt zijn genoeg. Je krijgt helderheid over je vraag, mijn werkwijze en een passende vervolgstap.</dd></div>
-              <div><dt>Duur</dt><dd>30 minuten</dd></div>
-            </dl>
-            <a href="#contact">Plan kennismaking</a>
-          </article>
-          <article class="offer">
-            <h3>1:1 traject</h3>
-            <p class="offer-intro">Voor wanneer je na een overlijden steeds opnieuw tegen jezelf aanloopt.</p>
-            <dl>
-              <div><dt>Voor wie</dt><dd>Als je bent vastgelopen na het overlijden van een dierbare en behoefte hebt aan individuele begeleiding.</dd></div>
-              <div><dt>Wat het brengt</dt><dd>Er ontstaat ruimte voor je verhaal, je lichaam, je emoties en wat je nodig hebt om weer stevigheid te ervaren — in vijf sessies onderzoeken we je verlies én wat er in jou is veranderd.</dd></div>
-              <div><dt>Duur</dt><dd>5 individuele sessies van 60 minuten</dd></div>
-            </dl>
-            <a href="#contact">Bekijk 1:1 traject</a>
-          </article>
-          <article class="offer">
-            <h3>Groepstraject rouw in beweging</h3>
-            <p class="offer-intro">Herkenning en steun in een kleine groep.</p>
-            <dl>
-              <div><dt>Voor wie</dt><dd>Als je je alleen voelt in je rouw en steun zoekt van mensen die iets vergelijkbaars kennen.</dd></div>
-              <div><dt>Wat het brengt</dt><dd>Je hoeft minder uit te leggen. We praten, werken ervaringsgericht en betrekken de paarden bij thema's die na een overlijden naar voren kunnen komen — zo komt rouw voorzichtig in beweging.</dd></div>
-              <div><dt>Duur</dt><dd>6 groepssessies van 2,5 uur · maximaal 4 deelnemers</dd></div>
-            </dl>
-            <a href="#contact">Bekijk groepstraject</a>
-          </article>
-          <article class="offer">
-            <h3>Team / groep coaching</h3>
-            <p class="offer-intro">Zorgvuldig omgaan met verlies op de werkvloer.</p>
-            <dl>
-              <div><dt>Voor wie</dt><dd>Voor organisaties die willen begrijpen wat er speelt wanneer een medewerker na een overlijden weer aan het werk gaat maar merkt dat concentratie, belastbaarheid of contact met collega's is veranderd.</dd></div>
-              <div><dt>Wat het brengt</dt><dd>Teams krijgen taal, ruimte en begeleiding om verlies, verandering of spanning bespreekbaar te maken — praktisch en menselijk, zonder van rouw een probleem te maken dat zo snel mogelijk opgelost moet worden.</dd></div>
-              <div><dt>Duur</dt><dd>Op basis van afspraak</dd></div>
-            </dl>
-            <a href="#contact">Neem contact op</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-band experiences" id="ervaringen">
-        <div class="section-intro">
-          <p class="eyebrow">Ervaringen</p>
-          <h2>Rust, veiligheid en vertrouwen komen steeds terug.</h2>
-        </div>
-        <div class="quote-grid">
-          <figure>
-            <blockquote>Ik denderde maar door, zonder echt te leven. Nu durf ik weer te voelen in plaats van steeds te vluchten.</blockquote>
-            <figcaption>Ervaring uit begeleiding</figcaption>
-          </figure>
-          <figure>
-            <blockquote>Met steun van de paarden en de groep durfde ik weer te voelen wat er in mij leefde.</blockquote>
-            <figcaption>Ervaring uit begeleiding</figcaption>
-          </figure>
-          <figure>
-            <blockquote>Ramona creëert een hele veilige omgeving samen met Ollie en Bob en neemt de tijd.</blockquote>
-            <figcaption>Ervaring uit begeleiding</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="split-section over" id="over">
-        <div class="split-copy">
-          <p class="eyebrow">Over Ramona</p>
-          <h2>Ik luister naar wat je vertelt. En naar wat er ondertussen gebeurt.</h2>
-          <p>
-            Ik begeleid volwassenen die na het overlijden van een dierbare
-            merken dat niet alleen hun leven, maar ook zijzelf veranderd
-            zijn. Mijn manier van werken is rustig, lichaamsgericht en
-            ervaringsgericht.
-          </p>
-          <p>
-            Ik let op waar iets stokt. Wanneer je harder gaat praten of juist
-            stiller wordt. Waar je spanning voelt. Wanneer je eigenlijk heel
-            goed weet wat je nodig hebt, maar daar nog niet op vertrouwt.
-          </p>
-          <p>
-            Ik werk onder andere met paarden, omdat juist in de ervaring
-            soms zichtbaar wordt wat met woorden moeilijk te bereiken is. Ik
-            bepaal niet voor jou wat iets betekent — ik help je onderzoeken
-            wat jij zelf merkt.
-          </p>
-          <p>
-            Je hoeft bij mij niet op een bepaalde manier te rouwen. Er is
-            ruimte voor het gemis, voor alles wat ingewikkeld is en ook voor
-            het leven dat ondertussen doorgaat.
-          </p>
-          <div class="professional-list">
-            <strong>Vertrouwen en professionaliteit</strong>
-            <ul>
-              <li>Aangesloten bij GAT-klachtrecht en GAT-tuchtrecht</li>
-              <li>Valt als CAT-therapeut onder GAT-Wkkgz klachtrecht</li>
-              <li>Begeleiding voor particulieren, groepen en organisaties</li>
-              <li>Heldere afstemming vooraf via een gratis kennismaking</li>
-            </ul>
-          </div>
-        </div>
-        <div class="portrait-frame">
-          <img src="images/ramona-horse.jpeg" alt="Ramona met een paard" />
-        </div>
-      </section>
-
-      <section class="affiliations section-band" aria-label="Aangesloten bij">
-        <div class="section-intro">
-          <p class="eyebrow">Aangesloten bij</p>
-          <h2>Professionele bedding en duidelijke klachtenregeling.</h2>
-          <p>
-            Ramona Terpstra Coaching is aangesloten bij verschillende beroeps-
-            en kwaliteitsorganisaties. Als CAT-therapeut valt Ramona onder
-            GAT-Wkkgz klachtrecht en GAT-tuchtrecht bij de geschilleninstantie
-            Alternatieve Therapeuten.
-          </p>
-        </div>
-        <div class="affiliation-grid">
-          <a class="affiliation-logo" href="http://kreac.nl" target="_blank" rel="noreferrer"><img src="images/affiliation-kreac.png" alt="KREAC EATL3" /></a>
-          <a class="affiliation-logo" href="http://nobco.nl" target="_blank" rel="noreferrer"><img src="images/affiliation-nobco.png" alt="NOBCO" /></a>
-          <a class="affiliation-logo" href="http://catvergoedbaar.nl" target="_blank" rel="noreferrer"><img src="images/affiliation-cat.png" alt="CAT Vergoedbaar" /></a>
-          <a class="affiliation-logo" href="https://gatgeschillen.nl" target="_blank" rel="noreferrer"><img src="images/affiliation-gat.png" alt="GAT Geschillen Alternatieve Therapeuten" /></a>
-        </div>
-      </section>
-
-      <section class="section-band practical">
-        <div class="section-intro">
-          <p class="eyebrow">Praktisch</p>
-          <h2>Wat handig is om vooraf te weten.</h2>
-        </div>
-        <div class="practical-grid">
-          <article><h3>Locatie</h3><p>Begeleiding in de regio Alkmaar en Bergen, in een rustige setting met de paarden.</p></article>
-          <article><h3>Kleding</h3><p>Draag kleding waarin je makkelijk beweegt en schoenen die vies mogen worden.</p></article>
-          <article><h3>Veiligheid</h3><p>Je werkt altijd onder begeleiding. Afstand, rust en respect voor mens en dier zijn leidend.</p></article>
-          <article><h3>Tarieven</h3><p>Tarieven en maatwerk kunnen op aanvraag of tijdens de kennismaking worden besproken.</p></article>
-        </div>
-      </section>
-
-      <section class="faq" id="faq">
-        <div class="section-intro">
-          <p class="eyebrow">Veelgestelde vragen</p>
-          <h2>Twijfels mogen er ook zijn.</h2>
-        </div>
-        <div class="faq-list">
-          <details><summary>Moet ik ervaring hebben met paarden?</summary><p>Nee. Je hoeft niets met paarden te kunnen en je hoeft ook niet te rijden. De sessies vinden naast het paard plaats.</p></details>
-          <details><summary>Is paardencoaching hetzelfde als paardrijles?</summary><p>Nee. Paardencoaching gaat niet over rijden of techniek, maar over wat er zichtbaar wordt in contact met het paard.</p></details>
-          <details><summary>Moet ik tijdens iedere sessie met een paard werken?</summary><p>Nee. De paarden zijn onderdeel van mijn manier van werken, maar niet iedere sessie hoeft hetzelfde te verlopen. We kijken naar wat bij jou en bij dat moment past.</p></details>
-          <details><summary>Wat als ik paarden spannend vind?</summary><p>Dat mag. Je hoeft niet direct dichtbij een paard te staan of contact te maken. Ook afstand houden, kijken en opmerken wat er bij jou gebeurt kan onderdeel zijn van de sessie.</p></details>
-          <details><summary>Ik weet niet goed wat mijn hulpvraag is. Kan ik dan toch contact opnemen?</summary><p>Ja. Misschien weet je alleen dat je sinds het overlijden anders reageert dan je van jezelf gewend bent en dat je hier niet alleen in verder wilt. Dat is genoeg om mee te beginnen.</p></details>
-          <details><summary>Voor wie is dit minder geschikt?</summary><p>Bij ernstige psychische klachten, crisis of acute onveiligheid is aanvullende professionele zorg belangrijk. Als mijn begeleiding niet voldoende of passend is, zal ik daar eerlijk over zijn.</p></details>
+          <a class="button secondary" href="aanbod.html">Bekijk het volledige aanbod</a>
         </div>
       </section>
 
@@ -385,9 +225,38 @@
         <p>Rouwbegeleiding, paardencoaching en teambegeleiding bij verlies.</p>
       </div>
       <div class="footer-links">
+        <a href="aanbod.html">Aanbod</a>
+        <a href="over-ramona.html">Over Ramona</a>
+        <a href="praktisch.html">Praktisch &amp; FAQ</a>
         <a href="https://www.ramonaterpstra.nl/algemene-voorwaarden/">Algemene voorwaarden</a>
         <a href="https://www.ramonaterpstra.nl/privacy-verklaring/">Privacy verklaring</a>
       </div>
     </footer>
+
+    <script>
+      (function () {
+        var toggle = document.querySelector(".nav-toggle");
+        var nav = document.getElementById("site-nav");
+        if (!toggle || !nav) return;
+
+        function closeNav() {
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+        }
+
+        toggle.addEventListener("click", function () {
+          var isOpen = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        nav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", closeNav);
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") closeNav();
+        });
+      })();
+    </script>
   </body>
 </html>
