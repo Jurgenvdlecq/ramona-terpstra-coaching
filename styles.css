@@ -87,6 +87,18 @@ nav a:hover {
   color: var(--sage-dark);
 }
 
+nav a.nav-cta {
+  background: var(--sage-dark);
+  border-radius: 999px;
+  color: #fffdfa;
+  padding: 8px 16px;
+}
+
+nav a.nav-cta:hover {
+  color: #fffdfa;
+  opacity: 0.9;
+}
+
 .nav-toggle {
   align-items: center;
   background: var(--paper);
@@ -252,6 +264,30 @@ p {
 
 .mobile-cta {
   display: none;
+}
+
+.page-orient {
+  align-items: baseline;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 14px clamp(18px, 5vw, 72px);
+}
+
+.page-orient-label {
+  color: var(--clay);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.page-orient-line {
+  color: var(--muted);
+  font-size: 0.88rem;
 }
 
 .hero-image,
@@ -847,7 +883,14 @@ footer a {
     padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
     position: fixed;
     right: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
     z-index: 15;
+  }
+
+  .mobile-cta.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100%);
   }
 
   .mobile-cta .button {
@@ -1024,6 +1067,7 @@ footer a {
   .split-section,
   .faq,
   .contact,
+  .page-orient,
   footer {
     padding-left: 16px;
     padding-right: 16px;

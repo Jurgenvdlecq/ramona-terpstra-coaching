@@ -31,7 +31,7 @@
         <a href="aanbod.html">Aanbod</a>
         <a href="over-ramona.html">Over Ramona</a>
         <a href="praktisch.html">Praktisch &amp; FAQ</a>
-        <a href="index.html#contact">Contact</a>
+        <a class="nav-cta" href="index.html#contact">Contact</a>
       </nav>
     </header>
 
@@ -300,6 +300,20 @@
         document.addEventListener("keydown", function (event) {
           if (event.key === "Escape") closeNav();
         });
+      })();
+
+      (function () {
+        var bar = document.querySelector(".mobile-cta");
+        var hero = document.querySelector(".hero");
+        if (!bar || !hero) return;
+
+        function update() {
+          var threshold = hero.offsetTop + hero.offsetHeight - 80;
+          bar.classList.toggle("is-hidden", window.scrollY < threshold);
+        }
+
+        window.addEventListener("scroll", update, { passive: true });
+        update();
       })();
 
       (function () {
