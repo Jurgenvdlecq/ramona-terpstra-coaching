@@ -526,6 +526,46 @@ figcaption {
   font-weight: 700;
 }
 
+.case-block {
+  background: var(--moss);
+  border-radius: 8px;
+  margin-top: 24px;
+  padding: clamp(22px, 4vw, 36px);
+}
+
+.case-block .eyebrow {
+  margin-bottom: 16px;
+}
+
+.case-block figure {
+  background: var(--paper);
+}
+
+.shame-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.shame-list span {
+  background: var(--moss);
+  border-radius: 999px;
+  color: #23302b;
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 7px 14px;
+}
+
+.step-note {
+  align-self: start;
+  color: var(--foreground);
+  font-size: 1.02rem;
+  font-weight: 700;
+  grid-column: 1 / -1;
+  margin-top: 4px;
+}
+
 .offers {
   padding-bottom: clamp(58px, 8vw, 112px);
   padding-top: clamp(58px, 8vw, 112px);
