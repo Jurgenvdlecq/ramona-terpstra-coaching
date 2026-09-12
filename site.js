@@ -54,7 +54,7 @@
   var status = document.getElementById("form-status");
   if (!form || !status) return;
 
-  var RECIPIENT = ["ramonaterpstra", "gmail.com"].join("@");
+  var RECIPIENT = ["info", "ramonaterpstra.nl"].join("@");
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();

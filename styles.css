@@ -1370,3 +1370,29 @@ nav a.nav-cta:focus-visible,
     display: none;
   }
 }
+
+/* Juridische pagina's: doorlopende tekst met duidelijke tussenkoppen */
+.legal .section-intro {
+  max-width: 68ch;
+}
+
+.legal h2 {
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  margin-bottom: 12px;
+  margin-top: 40px;
+}
+
+.legal ul {
+  color: var(--muted);
+  display: grid;
+  gap: 8px;
+  line-height: 1.7;
+  margin: 0 0 16px;
+  padding-left: 20px;
+}
+
+.legal a {
+  color: var(--sage-dark);
+  font-weight: 700;
+  text-decoration: underline;
+}
