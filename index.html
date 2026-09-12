@@ -22,6 +22,8 @@
     <meta name="twitter:image" content="https://ramona-terpstra-coaching.vercel.app/images/hero.jpeg" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="preload" href="fonts/petrona-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -53,7 +55,7 @@
       <section class="hero" id="top">
         <div class="hero-copy">
           <p class="eyebrow">Rouwbegeleiding en paardencoaching in Alkmaar en Bergen</p>
-          <h1>Je herkent jezelf niet meer sinds het overlijden.</h1>
+          <h1>Je herkent jezelf niet meer <em>sinds het overlijden.</em></h1>
           <p class="lead">
             Je gaat door met je leven, maar merkt dat jij niet meer dezelfde
             bent. <span class="sm-hide">Wat je altijd hielp, werkt niet meer
@@ -79,6 +81,7 @@
         </div>
         <div class="hero-image">
           <img src="images/hero.jpeg" alt="Ramona Terpstra met een paard in een rustige buitenomgeving" width="909" height="753" fetchpriority="high" />
+          <span class="hero-caption">Ramona &amp; Ollie</span>
         </div>
       </section>
 
@@ -189,23 +192,23 @@
         </div>
         <div class="step-list">
           <article>
-            <h3>1. Aankomen</h3>
+            <span class="step-n" aria-hidden="true">1</span><h3>Aankomen</h3>
             <p>Een kort gesprek over waar je nu staat.</p>
           </article>
           <article>
-            <h3>2. Onderzoeken</h3>
+            <span class="step-n" aria-hidden="true">2</span><h3>Onderzoeken</h3>
             <p>We kijken naar wat er nu speelt, in dit moment.</p>
           </article>
           <article>
-            <h3>3. Werken naast het paard</h3>
+            <span class="step-n" aria-hidden="true">3</span><h3>Werken naast het paard</h3>
             <p>Vanaf de grond. Je hoeft niet te rijden en ervaring met paarden is niet nodig.</p>
           </article>
           <article>
-            <h3>4. Voelen</h3>
+            <span class="step-n" aria-hidden="true">4</span><h3>Voelen</h3>
             <p>Wat gebeurt er in je lichaam, in afstand, grenzen, beweging of stilstand.</p>
           </article>
           <article>
-            <h3>5. Vertalen naar je dagelijks leven</h3>
+            <span class="step-n" aria-hidden="true">5</span><h3>Vertalen naar je dagelijks leven</h3>
             <p>Samen onderzoeken we wat je meeneemt: meer rust, inzicht, grenzen, richting of vertrouwen.</p>
           </article>
         </div>
