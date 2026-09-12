@@ -6,7 +6,7 @@
   --line: #ded5c7;
   --sage: #687965;
   --sage-dark: #334533;
-  --clay: #a6634a;
+  --clay: #8a4e35;
   --gold: #c1a46c;
   --moss: #d8dfd0;
 }
@@ -59,6 +59,7 @@ img {
   display: flex;
   gap: 10px;
   font-weight: 700;
+  min-height: 44px;
   min-width: 220px;
 }
 
@@ -108,10 +109,10 @@ nav a.nav-cta:hover {
   display: none;
   flex-direction: column;
   gap: 5px;
-  height: 40px;
+  height: 44px;
   justify-content: center;
   padding: 0;
-  width: 40px;
+  width: 44px;
 }
 
 .nav-toggle span {
@@ -847,8 +848,10 @@ details p {
 }
 
 .form-checkbox input {
-  margin-top: 3px;
-  width: auto;
+  flex: none;
+  height: 22px;
+  margin-top: 1px;
+  width: 22px;
 }
 
 .form-checkbox a {
@@ -1253,7 +1256,13 @@ footer a {
 
   .footer-links {
     flex-direction: column;
-    gap: 8px;
+    gap: 0;
+  }
+
+  .footer-links a {
+    align-items: center;
+    display: flex;
+    min-height: 44px;
   }
 }
 
@@ -1341,5 +1350,23 @@ nav a.nav-cta:focus-visible,
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/* Ruimere aanraakgebieden voor tekstlinks binnen lopende tekst (mobiel) */
+@media (max-width: 620px) {
+  details p a,
+  .practical-grid p a,
+  .form-checkbox a {
+    display: inline-block;
+    padding: 6px 2px;
+  }
+}
+
+/* Zinsdelen die op kleine schermen wegvallen om de pagina korter te houden.
+   Geen dubbele tekst in de HTML: dit zijn de enige plekken waar ze staan. */
+@media (max-width: 620px) {
+  .sm-hide {
+    display: none;
   }
 }
