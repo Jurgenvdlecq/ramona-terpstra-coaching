@@ -4,10 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Aanbod | Ramona Terpstra Coaching</title>
-    <meta
-      name="description"
-      content="Kennismakingsgesprek, 1:1 traject, groepstraject en teamcoaching bij rouw en verlies — paardencoaching in Alkmaar en Bergen."
-    />
+    <meta name="description" content="Kennismakingsgesprek, 1:1 traject, groepstraject en teamcoaching bij rouw en verlies — paardencoaching in Alkmaar en Bergen." />
+    <link rel="canonical" href="https://ramona-terpstra-coaching.vercel.app/aanbod" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ramona Terpstra Coaching" />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:title" content="Aanbod | Ramona Terpstra Coaching" />
+    <meta property="og:description" content="Kennismakingsgesprek, 1:1 traject, groepstraject en teamcoaching bij rouw en verlies — paardencoaching in Alkmaar en Bergen." />
+    <meta property="og:url" content="https://ramona-terpstra-coaching.vercel.app/aanbod" />
+    <meta property="og:image" content="https://ramona-terpstra-coaching.vercel.app/images/hero.jpeg" />
+    <meta property="og:image:width" content="909" />
+    <meta property="og:image:height" content="753" />
+    <meta property="og:image:alt" content="Ramona Terpstra met een paard in een rustige buitenomgeving" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aanbod | Ramona Terpstra Coaching" />
+    <meta name="twitter:description" content="Kennismakingsgesprek, 1:1 traject, groepstraject en teamcoaching bij rouw en verlies — paardencoaching in Alkmaar en Bergen." />
+    <meta name="twitter:image" content="https://ramona-terpstra-coaching.vercel.app/images/hero.jpeg" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="apple-touch-icon" href="images/logo.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -44,7 +58,7 @@
       <section class="section-band outcomes">
         <div class="section-intro">
           <p class="eyebrow">Wat het kan opleveren</p>
-          <h2>Meer voelen wat waar is, zodat je keuzes minder vanuit overleven maakt.</h2>
+          <h1 class="page-title">Meer voelen wat waar is, zodat je keuzes minder vanuit overleven maakt.</h1>
           <p>
             We zoeken niet naar hoe je zo snel mogelijk van je rouw afkomt.
             We onderzoeken wat jij sinds het overlijden tegenkomt, hoe je
@@ -125,9 +139,13 @@
           <p class="eyebrow">Eerste stap</p>
           <h2>Je hoeft je verhaal nog niet compleet te hebben.</h2>
           <p>
-            Een paar zinnen over waar je nu tegenaan loopt zijn genoeg. Daarna
-            kijken we samen rustig of een kennismaking of traject passend is.
+            Als je merkt dat je sinds het overlijden van je dierbare steeds
+            opnieuw tegen jezelf aanloopt, kunnen we eerst kennismaken. Je
+            hoeft je verhaal niet compleet te hebben en je hoeft nog nergens
+            voor te kiezen — een paar zinnen over waar je nu tegenaan loopt
+            zijn genoeg.
           </p>
+          <p><strong>Daarna kijken we samen of mijn begeleiding bij jou past.</strong></p>
         </div>
         <a class="button primary" href="index.html#contact">Plan een gratis kennismaking</a>
       </section>
@@ -151,66 +169,6 @@
       <a class="button primary" href="index.html#contact">Plan een gratis kennismaking</a>
     </div>
 
-    <script>
-      (function () {
-        var toggle = document.querySelector(".nav-toggle");
-        var nav = document.getElementById("site-nav");
-        if (!toggle || !nav) return;
-
-        function closeNav() {
-          nav.classList.remove("is-open");
-          toggle.setAttribute("aria-expanded", "false");
-        }
-
-        toggle.addEventListener("click", function () {
-          var isOpen = nav.classList.toggle("is-open");
-          toggle.setAttribute("aria-expanded", String(isOpen));
-        });
-
-        nav.querySelectorAll("a").forEach(function (link) {
-          link.addEventListener("click", closeNav);
-        });
-
-        document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape") closeNav();
-        });
-      })();
-
-      (function () {
-        var sections = document.querySelectorAll("main > section:not(.hero)");
-        if (!sections.length) return;
-
-        sections.forEach(function (section) {
-          section.classList.add("reveal");
-        });
-
-        if (!("IntersectionObserver" in window)) {
-          sections.forEach(function (section) {
-            section.classList.add("is-visible");
-          });
-          return;
-        }
-
-        var observer = new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-              }
-            });
-          },
-          { threshold: 0, rootMargin: "0px 0px -60px 0px" }
-        );
-
-        sections.forEach(function (section) {
-          observer.observe(section);
-
-          var rect = section.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-            section.classList.add("is-visible");
-          }
-        });
-      })();
-    </script>
+    <script src="site.js" defer></script>
   </body>
 </html>

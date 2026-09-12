@@ -280,16 +280,6 @@ p {
   transform: translateY(-2px);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .button {
-    transition: none;
-  }
-
-  .primary:hover,
-  .secondary:hover {
-    transform: none;
-  }
-}
 
 .mobile-cta {
   display: none;
@@ -436,7 +426,7 @@ footer {
   margin-top: 28px;
 }
 
-.method-strip span {
+.method-strip li {
   background: var(--moss);
   border-radius: 999px;
   color: var(--sage-dark);
@@ -548,7 +538,7 @@ figcaption {
   margin: 16px 0;
 }
 
-.shame-list span {
+.shame-list li {
   background: var(--moss);
   border-radius: 999px;
   color: #23302b;
@@ -595,15 +585,6 @@ figcaption {
   transform: translateY(-3px);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .offer {
-    transition: none;
-  }
-
-  .offer:hover {
-    transform: none;
-  }
-}
 
 .offer p {
   font-size: 0.98rem;
@@ -800,7 +781,7 @@ details p {
   margin-top: 24px;
 }
 
-.contact-details span {
+.contact-details li {
   background: rgba(255, 253, 250, 0.12);
   border: 1px solid rgba(255, 253, 250, 0.22);
   border-radius: 999px;
@@ -1265,7 +1246,7 @@ footer a {
     gap: 8px;
   }
 
-  .contact-details span {
+  .contact-details li {
     border-radius: 8px;
     line-height: 1.35;
   }
@@ -1287,7 +1268,75 @@ footer a {
   transform: none;
 }
 
+/* Lijsten die visueel als pillen/kaarten worden getoond */
+.signal-grid,
+.shame-list,
+.method-strip,
+.contact-details {
+  list-style: none;
+  padding: 0;
+}
+
+/* Paginatitel op subpagina's: semantisch h1, visueel gelijk aan h2 */
+.page-title {
+  font-size: clamp(2.1rem, 4vw, 4.1rem);
+  line-height: 1.05;
+  margin-bottom: 22px;
+  max-width: none;
+  overflow-wrap: normal;
+}
+
+/* Leesbare regellengte voor lopende tekst */
+.section-intro p,
+.split-copy p,
+.contact div p,
+details p,
+.form-note {
+  max-width: 62ch;
+}
+
+.case-block figure {
+  max-width: 70ch;
+}
+
+/* Zichtbare focus bij toetsenbordgebruik */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  border-radius: 6px;
+  outline: 2px solid var(--clay);
+  outline-offset: 3px;
+}
+
+nav a.nav-cta:focus-visible,
+.button:focus-visible {
+  border-radius: 999px;
+}
+
+@media (max-width: 620px) {
+  .page-title {
+    font-size: 1.92rem;
+    line-height: 1.12;
+    margin-bottom: 16px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+
+  .primary:hover,
+  .secondary:hover {
+    transform: none;
+  }
+  .offer {
+    transition: none;
+  }
+
+  .offer:hover {
+    transform: none;
+  }
   .reveal {
     opacity: 1;
     transform: none;
